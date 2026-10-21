@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #222; }
+header { background: #0b6b3a; color: white; padding: 32px 16px; text-align: center; }
+header h1 { margin: 0 0 8px; }
+main { max-width: 800px; margin: 0 auto; padding: 16px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.filters input, .filters select { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
+.filters input { flex: 1; min-width: 200px; }
+.notice { font-size: 14px; color: #8a5a00; background: #fff4d6; padding: 8px; border-radius: 6px; }
+.card { background: white; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.card h2 { margin: 0 0 4px; font-size: 20px; }
+.tag { display: inline-block; background: #e3f3ea; color: #0b6b3a; padding: 2px 8px; border-radius: 12px; font-size: 13px; margin-right: 6px; }
+.card a { color: #0b6b3a; font-weight: bold; }
+footer { text-align: center; padding: 24px; font-size: 14px; color: #666; }
