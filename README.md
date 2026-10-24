@@ -1,5 +1,8 @@
 # OpportunityHub Ethiopia
 
+Your site is live at https://tarikubekele000-blip.github.io/opportunityhub-ethiopia/
+
+
 A website that helps Ethiopian Grade 9-12 students find scholarships,
 competitions, camps, and other programs in one place.
 
