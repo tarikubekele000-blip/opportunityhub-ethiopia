@@ -3,42 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find scholarships, competitions, camps, and programs for Ethiopian students in Grades 9-12.">
   <title>OpportunityHub Ethiopia</title>
   <link rel="stylesheet" href="style.css">
+  <script src="common.js"></script>
 </head>
 <body>
-  <header>
-    <h1>OpportunityHub Ethiopia</h1>
-    <p>Find scholarships, competitions, camps, and programs for Grades 9-12.</p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container bar">
+      <a class="brand" href="index.html">OpportunityHub <span>Ethiopia</span></a>
+      <nav>
+        <a href="index.html">Explore</a>
+        <a href="about.html">About &amp; help</a>
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">☾</button>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <div class="filters">
-      <input type="text" id="search" placeholder="Search opportunities...">
-      <select id="category">
-        <option value="">All categories</option>
-        <option>Scholarship</option>
-        <option>Competition</option>
-        <option>Camp</option>
-        <option>Technology</option>
-        <option>Course</option>
-        <option>Volunteering</option>
-      </select>
-      <select id="grade">
-        <option value="">All grades</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-      </select>
+  <section class="hero">
+    <div class="container">
+      <h1>Find your next opportunity</h1>
+      <p>Scholarships, competitions, camps, and programs for Grades 9–12, all in one place.</p>
+      <label class="sr-only" for="search">Search opportunities</label>
+      <input id="search" type="search" placeholder="Search by title, organizer, or category">
+      <div class="stats">
+        <div><strong id="stat-total">0</strong><span>open now</span></div>
+        <div><strong id="stat-soon">0</strong><span>closing within 14 days</span></div>
+        <div><strong id="stat-cats">0</strong><span>categories</span></div>
+      </div>
     </div>
+  </section>
 
-    
-    <p class="notice">Note: the listings below are sample data for testing only.</p>
-    <div id="list"></div>
+  <main id="main" class="container">
+    <section class="filters" aria-label="Filters">
+      <div id="chips" class="chips"></div>
+      <div class="filter-row">
+        <label>Grade
+          <select id="grade">
+            <option value="">All grades</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+        </label>
+        <label>Format
+          <select id="mode"><option value="">All formats</option></select>
+        </label>
+        <label>Sort by
+          <select id="sort">
+            <option value="deadline">Deadline (soonest)</option>
+            <option value="title">Title (A–Z)</option>
+          </select>
+        </label>
+      </div>
+      <div class="filter-row">
+        <label class="check"><input type="checkbox" id="show-expired"> Show expired</label>
+        <label class="check"><input type="checkbox" id="saved-only"> Saved only</label>
+        <button id="clear" class="btn btn-ghost" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="list" class="grid"></div>
+
+    <p class="notice">The listings above are sample data for testing. They will be replaced with verified opportunities.</p>
   </main>
 
-  <footer>OpportunityHub Ethiopia. Always confirm details on the official page.</footer>
+  <footer class="site-footer">
+    <p>OpportunityHub Ethiopia. Always confirm details on the official page before applying.</p>
+    <p><a href="about.html">How listings are checked</a></p>
+  </footer>
+
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
