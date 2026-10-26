@@ -9,72 +9,184 @@
   <script src="common.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#explore">Skip to opportunities</a>
 
   <header class="site-header">
     <div class="container bar">
       <a class="brand" href="index.html">OpportunityHub <span>Ethiopia</span></a>
       <nav>
-        <a href="index.html">Explore</a>
-        <a href="about.html">About &amp; help</a>
+        <a href="index.html#explore">Explore</a>
+        <a class="hide-sm" href="index.html#how">How it works</a>
+        <a href="project.html">The project</a>
+        <a class="hide-sm" href="about.html">About &amp; help</a>
         <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark mode">☾</button>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h1>Find your next opportunity</h1>
-      <p>Scholarships, competitions, camps, and programs for Grades 9–12, all in one place.</p>
-      <label class="sr-only" for="search">Search opportunities</label>
-      <input id="search" type="search" placeholder="Search by title, organizer, or category">
-      <div class="stats">
-        <div><strong id="stat-total">0</strong><span>open now</span></div>
-        <div><strong id="stat-soon">0</strong><span>closing within 14 days</span></div>
-        <div><strong id="stat-cats">0</strong><span>categories</span></div>
+    <div class="container hero-grid">
+      <div>
+        <span class="badge-pill">Graduation Project</span>
+        <h1>Find your next opportunity</h1>
+        <p class="lead">Scholarships, competitions, camps, and programs for Ethiopian students in Grades 9–12, all in one trusted place.</p>
+        <label class="sr-only" for="search">Search opportunities</label>
+        <input id="search" type="search" placeholder="Search by title, organizer, or category">
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#explore">Browse opportunities</a>
+          <a class="btn btn-outline-light" href="project.html">About the project</a>
+        </div>
+        <div class="stats">
+          <div><strong id="stat-total">0</strong><span>open now</span></div>
+          <div><strong id="stat-soon">0</strong><span>closing within 14 days</span></div>
+          <div><strong id="stat-cats">0</strong><span>categories</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mini-card">
+          <div class="mini-top"><span class="tag">Scholarship</span><span class="deadline">Example</span></div>
+          <strong>Clear eligibility</strong>
+          <small>See who can apply before you start</small>
+        </div>
+        <div class="mini-card">
+          <div class="mini-top"><span class="tag">Competition</span><span class="deadline soon">Deadline label</span></div>
+          <strong>Never miss a date</strong>
+          <small>Colored labels show what closes soon</small>
+        </div>
+        <div class="mini-card">
+          <div class="mini-top"><span class="tag">Camp</span><span class="deadline">Official link</span></div>
+          <strong>Apply the safe way</strong>
+          <small>Every listing points to the organizer</small>
+        </div>
       </div>
     </div>
   </section>
 
-  <main id="main" class="container">
-    <section class="filters" aria-label="Filters">
-      <div id="chips" class="chips"></div>
-      <div class="filter-row">
-        <label>Grade
-          <select id="grade">
-            <option value="">All grades</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-          </select>
-        </label>
-        <label>Format
-          <select id="mode"><option value="">All formats</option></select>
-        </label>
-        <label>Sort by
-          <select id="sort">
-            <option value="deadline">Deadline (soonest)</option>
-            <option value="title">Title (A–Z)</option>
-          </select>
-        </label>
+  <section class="section alt" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>From searching to applying in three steps</h2>
+        <p>No more scrolling through dozens of channels to find one deadline.</p>
       </div>
-      <div class="filter-row">
-        <label class="check"><input type="checkbox" id="show-expired"> Show expired</label>
-        <label class="check"><input type="checkbox" id="saved-only"> Saved only</label>
-        <button id="clear" class="btn btn-ghost" type="button">Clear filters</button>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Search and filter</h3>
+          <p>Use keywords, categories, grade, and format to narrow down what fits you.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Check the details</h3>
+          <p>Read the eligibility, benefits, deadline, and the documents you need.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Apply officially</h3>
+          <p>Follow the link to the organizer's official page, and save or track your progress.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <p id="count" class="count" aria-live="polite"></p>
-    <div id="list" class="grid"></div>
+  <section class="section" id="explore">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Explore</div>
+        <h2>Browse opportunities</h2>
+        <p>Filter by category, grade, and format, or sort by the nearest deadline.</p>
+      </div>
 
-    <p class="notice">The listings above are sample data for testing. They will be replaced with verified opportunities.</p>
-  </main>
+      <section class="filters" aria-label="Filters">
+        <div id="chips" class="chips"></div>
+        <div class="filter-row">
+          <label>Grade
+            <select id="grade">
+              <option value="">All grades</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+          </label>
+          <label>Format
+            <select id="mode"><option value="">All formats</option></select>
+          </label>
+          <label>Sort by
+            <select id="sort">
+              <option value="deadline">Deadline (soonest)</option>
+              <option value="title">Title (A–Z)</option>
+            </select>
+          </label>
+          <label class="check"><input type="checkbox" id="show-expired"> Show expired</label>
+          <label class="check"><input type="checkbox" id="saved-only"> Saved only</label>
+          <button id="clear" class="btn btn-ghost" type="button">Clear filters</button>
+        </div>
+      </section>
+
+      <p id="count" class="count" aria-live="polite"></p>
+      <div id="list" class="grid"></div>
+
+      <p class="notice">The listings above are sample data for testing. They will be replaced with verified opportunities.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Built on trust</div>
+        <h2>Why students can rely on it</h2>
+        <p>Accuracy matters more than the number of listings.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="ico" aria-hidden="true">🔗</div><h3>Official sources</h3><p>Every listing links to the organizer's own page, so you apply in the right place.</p></div>
+        <div class="feature"><div class="ico" aria-hidden="true">✅</div><h3>Checked dates</h3><p>Each listing shows when it was last checked, and unverified details are labeled.</p></div>
+        <div class="feature"><div class="ico" aria-hidden="true">📅</div><h3>Deadline labels</h3><p>See at a glance what is open, closing soon, or already expired.</p></div>
+        <div class="feature"><div class="ico" aria-hidden="true">⭐</div><h3>Save and track</h3><p>Save favorites and mark each one as interested, preparing, or submitted.</p></div>
+        <div class="feature"><div class="ico" aria-hidden="true">🛡</div><h3>Safety tips</h3><p>Clear advice on avoiding scams and never paying just to apply.</p></div>
+        <div class="feature"><div class="ico" aria-hidden="true">📱</div><h3>Works on phones</h3><p>A responsive layout with light and dark modes, built for small screens too.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <h2>See how this project was built</h2>
+        <p>Read about the problem, the objectives, the technology, and the roadmap behind OpportunityHub Ethiopia.</p>
+        <a class="btn btn-light" href="project.html">View the project</a>
+      </div>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <p>OpportunityHub Ethiopia. Always confirm details on the official page before applying.</p>
-    <p><a href="about.html">How listings are checked</a></p>
+    <div class="footer-grid">
+      <div>
+        <h4>OpportunityHub Ethiopia</h4>
+        <p>A graduation project that helps Ethiopian students in Grades 9–12 find trustworthy opportunities and take the next step toward applying.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#explore">Browse opportunities</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="about.html">About &amp; help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="project.html">Project overview</a></li>
+          <li><a href="project.html#roadmap">Roadmap</a></li>
+          <li><a href="project.html#tech">Technology</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Graduation project by Tariku Bekele · Negele Ifa Boru Special Secondary Boarding School · 2026</p>
+      <p>Always confirm details on the official page before applying.</p>
+    </div>
   </footer>
 
   <script src="data.js"></script>
