@@ -55,6 +55,7 @@ function renderDetail() {
       <p class="muted">Offered by ${escapeHtml(o.organizer)}</p>
 
       ${info.expired ? '<p class="notice danger">This deadline has passed. Check the official page for new dates.</p>' : ""}
+      ${o.deadlineNote ? `<p class="notice">${escapeHtml(o.deadlineNote)}</p>` : ""}
 
       <div class="facts">
         <div class="fact"><span>Deadline</span><strong>${escapeHtml(formatDate(o.deadline))}</strong></div>

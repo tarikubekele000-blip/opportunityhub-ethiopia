@@ -39,7 +39,7 @@ function setupControls() {
   const open = opportunities.filter(o => !deadlineInfo(o.deadline).expired);
   const soon = open.filter(o => {
     const d = deadlineInfo(o.deadline).days;
-    return d !== null && d <= 14;
+    return d !== null && d <= 90;
   });
   els.statTotal.textContent = open.length;
   els.statSoon.textContent = soon.length;
@@ -85,7 +85,7 @@ function render() {
     if (state.category && o.category !== state.category) return false;
     if (state.grade && !o.grades.includes(Number(state.grade))) return false;
     if (state.mode && o.mode !== state.mode) return false;
-    if (text && !(o.title + " " + o.organizer + " " + o.category).toLowerCase().includes(text)) return false;
+    if (text && !(o.title + " " + o.organizer + " " + o.category + " " + (o.keywords || "")).toLowerCase().includes(text)) return false;
     return true;
   });
 
@@ -94,6 +94,7 @@ function render() {
     const A = deadlineInfo(a.deadline);
     const B = deadlineInfo(b.deadline);
     if (A.expired !== B.expired) return A.expired ? 1 : -1;
+    if (!a.deadline || !b.deadline) return (a.deadline ? 0 : 1) - (b.deadline ? 0 : 1);
     return a.deadline.localeCompare(b.deadline);
   });
 

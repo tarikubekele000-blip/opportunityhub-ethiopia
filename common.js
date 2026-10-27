@@ -76,7 +76,7 @@ function setStatus(id, status) {
 // Dates
 function formatDate(dateString) {
   const d = new Date(dateString + "T00:00:00");
-  if (isNaN(d)) return "Not set";
+  if (isNaN(d)) return "Not announced yet";
   return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 }
 
@@ -84,7 +84,7 @@ function deadlineInfo(deadline) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const end = new Date(deadline + "T00:00:00");
-  if (isNaN(end)) return { expired: false, days: null, label: "Deadline not set", level: "none" };
+  if (isNaN(end)) return { expired: false, days: null, label: "No deadline yet", level: "none" };
 
   const days = Math.round((end - today) / 86400000);
   if (days < 0) return { expired: true, days: days, label: "Expired", level: "expired" };

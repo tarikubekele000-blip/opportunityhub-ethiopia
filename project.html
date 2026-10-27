@@ -37,11 +37,13 @@
       <h2>Project details</h2>
       <div class="facts">
         <div class="fact"><span>Project title</span><strong>OpportunityHub Ethiopia</strong></div>
-        <div class="fact"><span>Student</span><strong>Tariku Bekele</strong></div>
+        <div class="fact"><span>Student</span><strong>Tariku Bekele (Grade 12)</strong></div>
         <div class="fact"><span>School</span><strong>Negele Ifa Boru Special Secondary Boarding School</strong></div>
         <div class="fact"><span>Advisor</span><strong>Befekadu Birhanu</strong></div>
-        <div class="fact"><span>Academic year</span><strong>2026</strong></div>
-        <div class="fact"><span>Target users</span><strong>Grades 9–12 students</strong></div>
+        <div class="fact"><span>Year</span><strong>2026</strong></div>
+        <div class="fact"><span>Contact</span><strong>tarikubekele000@gmail.com</strong></div>
+        <div class="fact"><span>Source code</span><strong><a href="https://github.com/tarikubekele000-blip/opportunityhub-ethiopia" target="_blank" rel="noopener noreferrer">GitHub repository</a></strong></div>
+        <div class="fact"><span>Target users</span><strong>Students in Grades 9–12</strong></div>
       </div>
     </section>
 
@@ -52,95 +54,145 @@
       </section>
       <section class="panel">
         <h2>The solution</h2>
-        <p>OpportunityHub Ethiopia gathers opportunities into one searchable website. Each listing follows the same format: organizer, category, target grade, delivery mode, eligibility, benefits, deadline, required materials, last-checked date, and an official application link. Students can filter, save, and track opportunities.</p>
+        <p>OpportunityHub Ethiopia gathers opportunities into one searchable website. Each listing follows the same format: organizer, category, target grade, delivery format, eligibility, benefits, deadline, required materials, last-checked date, and a link to the official application page. Students can search, filter, save, and track opportunities.</p>
       </section>
     </div>
 
     <section class="panel">
-      <h2>Objectives</h2>
-      <ul>
-        <li><strong>Make discovery easier:</strong> students find opportunities using search, category, grade, and format filters.</li>
-        <li><strong>Make information clearer:</strong> every listing shows eligibility, a deadline, and an official link.</li>
-        <li><strong>Support action:</strong> students can save listings and track their application progress.</li>
-        <li><strong>Support trust:</strong> listings are sourced, dated, and clearly labeled when unverified.</li>
-        <li><strong>Deliver a working product:</strong> a deployed public demo with documentation.</li>
-      </ul>
-    </section>
-
-    <section class="panel">
-      <h2>Key features</h2>
-      <ul>
-        <li>Searchable directory with category, grade, and format filters, and sorting by deadline</li>
-        <li>Opportunity detail pages with eligibility, benefits, required materials, and the official link</li>
-        <li>Deadline labels such as "12 days left", "Closes today", and "Expired"</li>
-        <li>Saved opportunities and an application tracker (Interested, Preparing, Submitted, Closed)</li>
-        <li>Safety guidance and a correction route for reporting wrong information</li>
-        <li>Responsive layout, light and dark modes, and keyboard-friendly navigation</li>
-      </ul>
-    </section>
-
-    <section class="panel" id="tech">
-      <h2>Technology</h2>
-      <p class="small">The current version is a working front-end prototype. The planned stack adds a real backend and database.</p>
+      <h2>Objectives and how the project meets them</h2>
       <div class="table-wrap">
         <table class="table">
-          <thead><tr><th>Layer</th><th>Current prototype</th><th>Planned</th></tr></thead>
+          <thead><tr><th>Objective</th><th>How it is met</th></tr></thead>
           <tbody>
-            <tr><td>Frontend</td><td>HTML, CSS, JavaScript</td><td>React and Tailwind CSS</td></tr>
-            <tr><td>Data</td><td>Sample listings in a data file</td><td>PostgreSQL database</td></tr>
-            <tr><td>Backend</td><td>None yet</td><td>Node.js and Express REST API</td></tr>
-            <tr><td>Accounts</td><td>Saved items stored in the browser</td><td>Secure sign-in with student and admin roles</td></tr>
-            <tr><td>Hosting</td><td>GitHub Pages</td><td>Separate frontend, API, and database hosting</td></tr>
-            <tr><td>Version control</td><td>Git and GitHub</td><td>GitHub with automated checks</td></tr>
+            <tr><td>Make discovery easier</td><td>Keyword search, category buttons, grade and format filters, and sorting by deadline.</td></tr>
+            <tr><td>Make information clearer</td><td>Every listing shows eligibility, benefits, required materials, a deadline, and an official link in the same layout.</td></tr>
+            <tr><td>Support action</td><td>Students can save opportunities and mark each as interested, preparing, submitted, or closed.</td></tr>
+            <tr><td>Support trust</td><td>Every listing is checked against the organizer's official page, shows a last-checked date, and labels any date that is not yet announced.</td></tr>
+            <tr><td>Protect students</td><td>Safety guidance, a correction route, and no collection of personal data.</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <section class="panel">
-      <h2>Architecture</h2>
-      <div class="flow-label">Current version</div>
-      <div class="flow">
-        <div class="flow-box">Student's browser</div>
-        <div class="flow-arrow" aria-hidden="true">→</div>
-        <div class="flow-box">HTML, CSS, JavaScript</div>
-        <div class="flow-arrow" aria-hidden="true">→</div>
-        <div class="flow-box">Sample data file</div>
-      </div>
-      <div class="flow-label">Planned version</div>
-      <div class="flow">
-        <div class="flow-box planned">Browser (React)</div>
-        <div class="flow-arrow" aria-hidden="true">→</div>
-        <div class="flow-box planned">Express API</div>
-        <div class="flow-arrow" aria-hidden="true">→</div>
-        <div class="flow-box planned">PostgreSQL</div>
-      </div>
-    </section>
-
-    <section class="panel" id="roadmap">
-      <h2>Roadmap</h2>
-      <ul class="roadmap">
-        <li><span class="status done">Done</span> Research, requirements, and user journeys</li>
-        <li><span class="status done">Done</span> Interface design and responsive layout</li>
-        <li><span class="status done">Done</span> Directory with search, filters, and sorting</li>
-        <li><span class="status done">Done</span> Detail pages, saved items, and application tracker</li>
-        <li><span class="status done">Done</span> About, safety, and correction page</li>
-        <li><span class="status doing">In progress</span> Replace sample data with verified listings</li>
-        <li><span class="status todo">Planned</span> Backend API and database</li>
-        <li><span class="status todo">Planned</span> Student accounts and protected admin publishing</li>
-        <li><span class="status todo">Planned</span> Testing, accessibility review, and full deployment</li>
-        <li><span class="status todo">Planned</span> Final presentation and demo</li>
+      <h2>Key features</h2>
+      <ul>
+        <li>Searchable directory with category, grade, and format filters, and sorting by deadline</li>
+        <li>Opportunity pages with eligibility, benefits, required materials, and the official link</li>
+        <li>Deadline labels such as "12 days left", "Closes today", and "Expired"</li>
+        <li>Clear notes when a deadline has not been announced yet, instead of guessed dates</li>
+        <li>Saved opportunities and an application tracker (Interested, Preparing, Submitted, Closed)</li>
+        <li>A similar-opportunities section and a copy-link button on each listing</li>
+        <li>Safety guidance and a route for reporting corrections</li>
+        <li>Responsive layout, light and dark modes, and keyboard-friendly navigation</li>
       </ul>
     </section>
 
     <section class="panel">
-      <h2>Limitations</h2>
+      <h2>Pages of the website</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Page</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Home</td><td>Introduces the project, explains how it works, and lets students search and filter opportunities.</td></tr>
+            <tr><td>Opportunity details</td><td>Shows the full information for one opportunity, the save and tracker tools, and similar listings.</td></tr>
+            <tr><td>About &amp; help</td><td>Explains how listings are checked, how to apply safely, and how to report a correction.</td></tr>
+            <tr><td>The project</td><td>Documents the problem, method, technology, and sources of this graduation project.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="tech">
+      <h2>Technology</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Part</th><th>Tool</th><th>Why it was chosen</th></tr></thead>
+          <tbody>
+            <tr><td>Structure</td><td>HTML5</td><td>Semantic pages with clear headings and landmarks, which help screen readers.</td></tr>
+            <tr><td>Design</td><td>CSS3</td><td>Responsive grid layouts and color variables that power the light and dark themes.</td></tr>
+            <tr><td>Behavior</td><td>JavaScript</td><td>Search, filters, sorting, saved items, and the tracker, with no external libraries to load.</td></tr>
+            <tr><td>Data</td><td>A listings data file</td><td>All verified opportunities are kept in one file, which makes updates simple and auditable.</td></tr>
+            <tr><td>Storage</td><td>Browser local storage</td><td>Saved items, tracker status, and theme stay on the student's own device.</td></tr>
+            <tr><td>Hosting and versions</td><td>GitHub and GitHub Pages</td><td>Free public hosting with a full history of every change.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>How it works</h2>
+      <div class="flow">
+        <div class="flow-box">Student's browser</div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-box">Website pages<br><small>HTML, CSS, JavaScript</small></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-box">Verified listings file</div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-box">Official organizer page</div>
+      </div>
+      <p class="small" style="margin-top:12px">The pages read the listings file, show the results, and send the student to the organizer's official page to apply. Saved items and tracker status are stored only in the student's browser.</p>
+    </section>
+
+    <section class="panel" id="method">
+      <h2>How listings are verified</h2>
       <ul>
-        <li>The current listings are sample data and will be replaced with verified ones.</li>
-        <li>Saved items and tracker status are stored only in the visitor's own browser.</li>
-        <li>There are no accounts or admin dashboard yet. Both are planned.</li>
-        <li>The site does not claim to list every opportunity or to guarantee that every organizer is legitimate.</li>
+        <li>Each opportunity is checked on the organizer's own website, not only on news or social media posts.</li>
+        <li>The deadline, eligibility, benefits, and required materials are copied from the official page and written in plain language.</li>
+        <li>If the organizer has not announced a date, the listing says so and explains what is known, instead of guessing.</li>
+        <li>Each listing shows the date it was last checked, and expired listings are marked automatically.</li>
+        <li>Students are always sent to the official page to apply, and the site never collects applications or fees.</li>
       </ul>
+      <h2 style="margin-top:20px">Sources used (checked 26 October 2026)</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Opportunity</th><th>Official source</th></tr></thead>
+          <tbody>
+            <tr><td>African Leadership Academy</td><td><a href="https://ala2.submittable.com/submit/360300/2027-diploma-program-eng" target="_blank" rel="noopener noreferrer">ALA application portal</a></td></tr>
+            <tr><td>UWC through UWC Ethiopia</td><td><a href="https://et.uwc.org/how-to-apply/" target="_blank" rel="noopener noreferrer">UWC Ethiopia website</a></td></tr>
+            <tr><td>Yale Young African Scholars</td><td><a href="https://africanscholars.yale.edu/admissions/eligibility" target="_blank" rel="noopener noreferrer">YYAS website</a></td></tr>
+            <tr><td>AddisCoder</td><td><a href="https://www.addiscoder.com/" target="_blank" rel="noopener noreferrer">AddisCoder website</a></td></tr>
+            <tr><td>EducationUSA Scholars Program</td><td><a href="https://educationusa.state.gov/centers/educationusa-advising-center-addis-ababa" target="_blank" rel="noopener noreferrer">EducationUSA Advising Center, Addis Ababa</a></td></tr>
+            <tr><td>5 Million Ethiopian Coders</td><td><a href="https://ethiocoders.et" target="_blank" rel="noopener noreferrer">Ethiopian Coders portal</a>, with public announcements about the initiative</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Design decisions</h2>
+      <ul>
+        <li><strong>Trust first:</strong> every listing shows its source, its last-checked date, and a reminder to confirm on the official page.</li>
+        <li><strong>Privacy by design:</strong> the site has no accounts, no tracking, and no forms that collect personal data. Student choices stay on their own device.</li>
+        <li><strong>Accessibility:</strong> a skip link, labeled form fields, visible keyboard focus, screen-reader announcements for search results, and respect for reduced-motion settings.</li>
+        <li><strong>Works for everyone:</strong> a mobile-first layout, light and dark themes, and no heavy downloads, so pages load quickly on slow connections.</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="roadmap">
+      <h2>Development stages</h2>
+      <ul class="roadmap">
+        <li><span class="status done">Done</span> Research, requirements, and user journeys</li>
+        <li><span class="status done">Done</span> Interface design and responsive layout</li>
+        <li><span class="status done">Done</span> Directory with search, filters, and sorting</li>
+        <li><span class="status done">Done</span> Opportunity pages, saved items, and application tracker</li>
+        <li><span class="status done">Done</span> About, safety, and correction page</li>
+        <li><span class="status done">Done</span> Verification of listings against official sources</li>
+        <li><span class="status done">Done</span> Publication on GitHub Pages</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Scope</h2>
+      <ul>
+        <li>The site presents a carefully checked selection of opportunities. It does not claim to list every opportunity or to guarantee that any organizer is legitimate.</li>
+        <li>Deadlines and rules can change, so every listing points students to the official page for final confirmation.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Acknowledgements</h2>
+      <p>Thank you to my advisor, <strong>Befekadu Birhanu</strong>, for his guidance throughout this project, and to <strong>Negele Ifa Boru Special Secondary Boarding School</strong> for the support that made it possible. Thank you also to the organizations whose official pages are linked on this site, for publishing clear information that students can rely on.</p>
     </section>
 
     <p class="notice">Project pitch: OpportunityHub Ethiopia reduces information barriers by putting verified opportunities, clear eligibility, and official sources in one organized place.</p>
@@ -148,7 +200,8 @@
 
   <footer class="site-footer">
     <div class="footer-bottom" style="border-top:0;padding-top:0">
-      <p>Graduation project by YOUR NAME · YOUR SCHOOL · 2026</p>
+      <p>Graduation project by Tariku Bekele · Negele Ifa Boru Special Secondary Boarding School · 2026</p>
+      <p>Advisor: Befekadu Birhanu</p>
       <p><a href="index.html">Back to home</a> · <a href="about.html">About &amp; help</a></p>
     </div>
   </footer>
